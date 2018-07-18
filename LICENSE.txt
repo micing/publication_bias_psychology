@@ -5,7 +5,7 @@ https://creativecommons.org/licenses/by/4.0/
 The preprint manuscript is the proper source for attribution of this work 
 until the manuscript has been published.
 
-The softwar (R-code) itself is licensed under an MIT licence (see below).
+The software itself (R-code) is licensed under an MIT licence (see below).
 
 MIT License
 
