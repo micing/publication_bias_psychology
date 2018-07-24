@@ -54,6 +54,7 @@ CIs = c(.95, .75, .50)
 Rs=sort(c(35/97, fv(CIs)))
 d=data$rep
 
+pdf(file = "pdf/figure3.pdf", width = 6, height = 6)
 op <- par(no.readonly = TRUE)
 par(mfrow=c(2,2), mar=c(5, 5.5, 2, 1), cex=.6)
 
@@ -79,5 +80,5 @@ plotit(d, "bias", CIs, Rs, legpos="bottomleft", ylim=c(1,300), log="xy",
 
 par(op)
 
-dev.copy(device = jpeg, filename = 'jpeg/figure3.jpg', quality=100, res=300, unit="mm", width = 150, height = 150)
+#dev.copy(device = jpeg, filename = 'jpeg/figure3.jpg', quality=100, res=300, unit="mm", width = 150, height = 150)
 dev.off()

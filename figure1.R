@@ -26,8 +26,10 @@ plotit <- function(m=c(.3, .4, .525, .80), density=dBetam, shape, ylab="", xlab=
   
 }
 
+pdf(file = "pdf/figure1.pdf", width = 6, height = 6)
+
 op <- par(no.readonly = TRUE)
-par(mfcol=c(3,2), mar=c(5, 5.5, 2, 1), cex=.8)
+par(mfcol=c(3,2), mar=c(5, 5.5, 2, 1), cex=.6)
 
 plotit(shape=1, density=dBetam, xlab="Statistical power", ylab="density", main="S=1")
 plotit(shape=1/2, density=dBetam, xlab="Statistical power", ylab="density", main="S=1/2")
@@ -36,5 +38,7 @@ plotit(shape=1, density=dbimodal1090, xlab="Statistical power", ylab="density", 
 plotit(shape=2, density=dbimodal1090, xlab="Statistical power", ylab="density", main="S=2 (10/90)")
 plotit(shape=1, density=dbimodal0595, xlab="Statistical power", ylab="density", main="S=1 (05/95)")
 
-dev.copy(device = jpeg, filename = 'jpeg/figure1.jpg', quality=100, width = 700, height = 700)
+#dev.copy(device = jpeg, filename = 'jpeg/figure1.jpg', quality=100, width = 700, height = 700)
+par(op)
 dev.off()
+
